@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+import { View, StyleSheet } from 'react-native';
 
 import { Header } from 'react-native-elements';
 import TabNavigator from './components/navigation/TabNavigator';
