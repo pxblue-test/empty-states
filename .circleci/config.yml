@@ -17,5 +17,5 @@ jobs:
             - ~/.cache
             - ./node_modules
       - run: 
-          name: Run Snapshot Tests
+          name: Run Tests
           command: yarn test
