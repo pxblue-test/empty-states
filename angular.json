@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@pxblue/themes/angular/theme.scss",
+              "./node_modules/typeface-open-sans"
             ],
             "scripts": []
           },
@@ -56,6 +58,9 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "es5": {
+              "tsConfig": "./tsconfig.es5.json"
             }
           }
         },
@@ -67,6 +72,9 @@
           "configurations": {
             "production": {
               "browserTarget": "pxblue-empty-states-angular:build:production"
+            },
+            "es5": {
+              "browserTarget": "pxblue-empty-states-angular:build:es5"
             }
           }
         },
@@ -88,7 +96,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@pxblue/themes/angular/theme.scss",
+              "./node_modules/typeface-open-sans"
             ],
             "scripts": []
           }
@@ -119,6 +129,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "pxblue-empty-states-angular"
 }

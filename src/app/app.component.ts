@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'my-app',
+  styleUrls: ['./app.component.scss'],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'pxblue-empty-states-angular';
+export class AppComponent  {
+  tabs = [
+    { path: '/actions', label: 'ACTION' },
+    { path: '/textonly', label: 'TEXT ONLY' },
+    { path: '/placeholder', label: 'PLACEHOLDER' },
+    { path: '/subcontent', label: 'SUB-CONTENT' }
+  ]
 }

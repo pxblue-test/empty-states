@@ -1,16 +1,49 @@
-import { BrowserModule } from '@angular/platform-browser';
+// Core Modules
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
+// Material Components
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatGridListModule } from '@angular/material/grid-list';
+
+// Routing
+import { ActionsComponent } from './pages/actions.component';
+import { PlaceholderComponent } from './pages/placeholder.component';
+import { SubcontentComponent } from './pages/subcontent.component';
+import { TextOnlyComponent } from './pages/text-only.component';
+import { AppRoutingModule } from './app.router';
+
+// Components
 import { AppComponent } from './app.component';
+import { EmptyStateComponent } from './components/empty-state.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, ActionsComponent, PlaceholderComponent, SubcontentComponent, TextOnlyComponent, EmptyStateComponent
   ],
   imports: [
-    BrowserModule
+    AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

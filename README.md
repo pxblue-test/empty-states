@@ -1,27 +1,49 @@
-# PxblueEmptyStatesAngular
+# Empty-states Example
+This project demonstrates how to use four different types of empty states.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+| Framework           | Status       | Live Examples  |
+| ---------------- |--------------|------------------|
+| Angular | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/angular) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-empty-states-angular)
+| React | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/react) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-empty-states-react)
+| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/ionic) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-empty-states-ionic)
+| React Native | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/reactnative) | [View on Snack](https://snack.expo.io/@px-blue/empty-states-reactnative)
 
-## Development server
+## Running the Example
+### Angular
+```
+git clone https://github.com/pxblue/empty-states -b angular
+cd empty-states
+yarn && yarn start
+```
+For additional information read our [Angular Guide](https://pxblue.github.io/development/frameworks-web/angular) and our [Environment Setup](https://pxblue.github.io/development/environment)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### React
+```
+git clone https://github.com/pxblue/empty-states -b react
+cd empty-states
+yarn && yarn start
+```
+For additional information read our [React Guide](https://pxblue.github.io/development/frameworks-web/react) and our [Environment Setup](https://pxblue.github.io/development/environment)
 
-## Code scaffolding
+### Ionic
+```
+git clone https://github.com/pxblue/empty-states -b ionic
+cd empty-states
+yarn && ionic serve
+```
+To run on a device, add the platform then build and run the project:
+```
+ionic cordova platform add [android|ios]
+ionic cordova build [android|ios]
+ionic cordova run [android|ios]
+```
+For additional information read our [Ionic Guide](https://pxblue.github.io/development/frameworks-mobile/ionic) and our [Environment Setup](https://pxblue.github.io/development/environment)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### React Native
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+git clone https://github.com/pxblue/empty-states -b reactnative
+cd empty-states
+yarn && yarn start
+```
+For additional information read our [React Native Guide](https://pxblue.github.io/development/frameworks-mobile/react-native) and our [Environment Setup](https://pxblue.github.io/development/environment)
