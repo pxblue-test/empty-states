@@ -1,0 +1,36 @@
+@import '~@pxblue/themes/angular/theme.scss'; 
+@import '~@pxblue/colors/palette.scss';
+
+.card{
+  padding: 0; 
+  width: 100%; 
+  margin-bottom: 10px;
+}
+
+.card-wrapper{
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.title{
+  min-height: 45px;
+  line-height: 45px; 
+  padding: 0 16px; 
+  margin: 0; 
+  color: map-get($pxb-white, 50)
+}
+
+mat-list-item.list-row{
+  height: auto; 
+  padding: 4px 0
+}
+
+.list-text{
+  flex: 1 1 0px; 
+  margin: 0;
+  &:last-child{
+    flex: 0 0 auto;
+    text-align: right;
+  }
+}

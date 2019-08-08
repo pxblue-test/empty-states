@@ -1,0 +1,36 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar style="--background : Colors.blue[500]">
+      <ion-title>
+        Empty States
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tabs style="position: relative; ">
+    <ion-tab-bar [style.background]="Colors.blue[500]">
+
+      <ion-tab-button tab="actions">
+        <mat-icon>touch_app</mat-icon>
+        <ion-label>Actions</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="textonly">
+        <mat-icon>subject</mat-icon>
+        <ion-label>Text Only</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="placeholder">
+        <mat-icon>crop_free</mat-icon>
+        <ion-label>Placeholder</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="subcontent">
+        <mat-icon>view_module</mat-icon>
+        <ion-label>Sub-Content</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
