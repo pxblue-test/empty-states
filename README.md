@@ -1,4 +1,4 @@
-# Empty States Example
+# Empty-states Example
 This project demonstrates how to use four different types of empty states.
 
 | Framework           | Status       | Live Examples  |
