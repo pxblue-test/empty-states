@@ -18,4 +18,4 @@ jobs:
             - ./node_modules
       - run: 
           name: Run Snapshot Tests
-          command: yarn test
+          command: yarn test --watch=false --no-progress
