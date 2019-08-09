@@ -11,7 +11,7 @@ import * as Colors from '@pxblue/colors';
       <h2>{{title}}</h2>
       <h4 *ngIf="description" [style.color]="Colors.blue[500]">{{description}}</h4>
       <div>
-        <ng-content select="[action]"></ng-content>
+        <ng-content select="[actions]"></ng-content>
       </div>
     </div>
   `,
