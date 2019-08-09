@@ -2,6 +2,7 @@
   "name": "pxblue-empty-states-ionic",
   "version": "0.0.0",
   "author": "PX Blue <pxblue@eaton.com>",
+  "description": "An Ionic project",
   "private": true,
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -12,10 +13,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-     "engines": {
-    "node": ">=10.0.0 <11.0.0"
-  },
-
   "dependencies": {
     "@angular-devkit/core": "8.2.0",
     "@angular-devkit/schematics": "8.2.0",
@@ -80,7 +77,6 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project",
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
