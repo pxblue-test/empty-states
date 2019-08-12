@@ -29,7 +29,6 @@ class App extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
     return (
       <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
         <AppBar position="static" color="primary">
