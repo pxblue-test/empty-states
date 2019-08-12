@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/empty-states
+    docker:
+      # FOR IONIC node:10.9-browsers
+      - image: circleci/node:12.6-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ~/.cache
+            - ./node_modules
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Test
+          # FOR ANGULAR AND IONIC: yarn test --watch=false --no-progress
+          command: yarn test
