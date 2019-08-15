@@ -1,10 +1,75 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import EmptyState from './components/EmptyStates';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+import Button from '@material-ui/core/Button';
+import PersonIcon from '@material-ui/icons/Person';
+import Typography from '@material-ui/core/Typography';
+
+import {
+  createMount,
+  createShallow,
+  createRender,
+  // describeConformance,
+  getClasses,
+} from '@material-ui/core/test-utils';
+
+
+Enzyme.configure({adapter: new Adapter()});
+  let mount;
+  let shallow;
+  let render;
+  let classes;
+
+describe("EmptyState", () => {
+  
+  beforeEach(() => {
+    mount = createMount({ strict: true });
+    shallow = createShallow({ dive: true });
+    render = createRender();
+    classes = getClasses(<EmptyState icon={<PersonIcon />} title="Test" description="Test Description" actions={<Button> Test </Button>}/>);
+  });
+  
+  afterEach(() => {
+    mount.cleanUp();
+  });
+  
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<BrowserRouter><EmptyState icon={<PersonIcon />} title="Test" description="Test Description" actions={<Button> Test </Button>}/></BrowserRouter>, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+  it('renders with frame class', () => {
+    const wrapper = shallow(
+      <EmptyState icon={<PersonIcon />} title="Test" />
+    );
+    expect(wrapper.hasClass(classes.frame)).toEqual(true);
+  });  
+  it('renders with icon', () => {
+    const wrapper = shallow(
+      <EmptyState icon={<PersonIcon />} title="Test" />
+    );
+    expect(wrapper.find(PersonIcon).length).toEqual(1);
+  });  
+  it('renders with text', () => {
+    const wrapper = shallow(
+      <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" />
+    );
+    expect(wrapper.find(Typography).length).toEqual(2);
+  });  
+  it('renders with actions', () => {
+    const wrapper = shallow(
+      <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" actions={<Button> Test </Button>} />
+    );
+    expect(wrapper.find(Button).length).toEqual(1);
+  });  
+})
+
+
+
+
+
+
