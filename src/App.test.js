@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import EmptyState from './components/EmptyStates';
+import EmptyState from './components/emptyStates';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -49,22 +49,34 @@ describe("EmptyState", () => {
     expect(wrapper.hasClass(classes.frame)).toEqual(true);
   });  
   it('renders with icon', () => {
-    const wrapper = shallow(
+    let wrapper = shallow(
       <EmptyState icon={<PersonIcon />} title="Test" />
     );
     expect(wrapper.find(PersonIcon).length).toEqual(1);
+    wrapper = shallow(
+      <EmptyState title="Test" />
+    );
+    expect(wrapper.find(PersonIcon).length).toEqual(0);
   });  
   it('renders with text', () => {
-    const wrapper = shallow(
+    let wrapper = shallow(
       <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" />
     );
     expect(wrapper.find(Typography).length).toEqual(2);
+    wrapper = shallow(
+      <EmptyState icon={<PersonIcon />} />
+    );
+    expect(wrapper.find(Typography).length).toEqual(0);
   });  
   it('renders with actions', () => {
-    const wrapper = shallow(
+    let wrapper = shallow(
       <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" actions={<Button> Test </Button>} />
     );
     expect(wrapper.find(Button).length).toEqual(1);
+    wrapper = shallow(
+      <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" />
+    );
+    expect(wrapper.find(Button).length).toEqual(0);
   });  
 })
 

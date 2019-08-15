@@ -24,12 +24,12 @@ class EmptyState extends React.Component {
     return (
       <div className={classes.frame}>
         {icon}
-        <Typography
+        {title && <Typography
           variant="h6"
           color="inherit"
           style={{ lineHeight: '1.2rem', marginBottom: '10px' }}
-        >{title}</Typography>
-        <Typography variant="subtitle2" color="primary">{description}</Typography>
+        >{title}</Typography>}
+        {description && <Typography variant="subtitle2" color="primary">{description}</Typography>}
         {actions}
       </div>
     )
