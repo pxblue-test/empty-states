@@ -12,8 +12,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@material-ui/core": "^4.1.2",
-    "@material-ui/icons": "^4.2.1",
     "@pxblue/colors": "^1.0.13",
     "expo": "^34.0.1",
     "react": "16.8.3",
