@@ -40,9 +40,6 @@
               },
               {
                 "input": "./node_modules/typeface-open-sans"
-              },
-              {
-                "input": "node_modules/@pxblue/icons/iconfont/PXBlueIcons.css"
               }
             ],
             "scripts": []
