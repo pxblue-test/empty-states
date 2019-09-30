@@ -3,10 +3,10 @@ This project demonstrates how to use four different types of empty states.
 
 | Framework           | Status       | Live Examples  |
 | ---------------- |--------------|------------------|
-| Angular | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/angular) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-empty-states-angular)
-| React | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/react) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-empty-states-react)
-| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/ionic) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-empty-states-ionic)
-| React Native | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/reactnative) | [View on Snack](https://snack.expo.io/@px-blue/empty-states-reactnative)
+| Angular | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/angular) | [View on Stackblitz](https://stackblitz.com/github/pxblue/empty-states/tree/angular)
+| React | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/react) | [View on Code Sandbox](https://codesandbox.io/s/github/pxblue/empty-states/tree/react)
+| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/ionic) | [View on Stackblitz](https://stackblitz.com/github/pxblue/empty-states/tree/ionic)
+| React Native | [![CircleCI](https://circleci.com/gh/pxblue/empty-states/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/empty-states/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/empty-states@reactnative)
 
 ## Running the Example
 ### Angular
@@ -33,6 +33,7 @@ yarn && ionic serve
 ```
 To run on a device, add the platform then build and run the project:
 ```
+ionic cordova resources
 ionic cordova platform add [android|ios]
 ionic cordova build [android|ios]
 ionic cordova run [android|ios]
