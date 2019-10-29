@@ -14,7 +14,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
-import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatGridListModule } from '@angular/material/grid-list';
 
@@ -23,20 +22,18 @@ import { PlaceholderComponent } from './pages/placeholder.component';
 import { TextOnlyComponent } from './pages/text-only.component';
 import { SubContentComponent } from './pages/sub-content.component';
 
-import { EmptyStateComponent } from './components/empty-state.component';
-
-
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app.router'
+import { AppRoutingModule } from './app.router';
+import {EmptyStateComponent} from '@pxblue/angular-components';
 
 @NgModule({
   declarations: [AppComponent, ActionsComponent, PlaceholderComponent, TextOnlyComponent, SubContentComponent, EmptyStateComponent],
   entryComponents: [],
   imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
-    AppRoutingModule, 
-    BrowserAnimationsModule, 
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
      FlexLayoutModule,
     MatToolbarModule,

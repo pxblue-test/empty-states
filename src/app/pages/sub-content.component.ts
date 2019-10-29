@@ -18,9 +18,9 @@ import * as Colors from '@pxblue/colors';
                 <h4 class="list-text">{{device.battery}}</h4>
               </mat-list-item>   
             </mat-list>
-            <empty-state *ngIf="!device.performance" title="No Data">
+            <pxb-empty-state *ngIf="!device.performance" title="No Data">
               <mat-icon empty-icon style="font-size: 100px">devices</mat-icon>
-            </empty-state>
+            </pxb-empty-state>
           </mat-card-content>
 
           <mat-card-actions *ngIf="device.performance" fxFlex="0 0 auto" style="margin: 0; text-align: center">
