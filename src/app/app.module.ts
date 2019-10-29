@@ -22,7 +22,9 @@ import { AppRoutingModule } from './app.router';
 
 // Components
 import { AppComponent } from './app.component';
-import {EmptyStateModule} from '@pxblue/angular-components/core/empty-state';
+
+// PxBlue
+import {EmptyStateModule} from '@pxblue/angular-components';
 
 @NgModule({
   declarations: [
