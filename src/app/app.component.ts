@@ -11,5 +11,5 @@ export class AppComponent  {
     { path: '/textonly', label: 'TEXT ONLY' },
     { path: '/placeholder', label: 'PLACEHOLDER' },
     { path: '/subcontent', label: 'SUB-CONTENT' }
-  ]
+  ];
 }
