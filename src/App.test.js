@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import EmptyState from './components/emptyStates';
+import EmptyState from '@pxblue/react-components/core/EmptyState';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -25,18 +25,18 @@ Enzyme.configure({adapter: new Adapter()});
   let classes;
 
 describe("EmptyState", () => {
-  
+
   beforeEach(() => {
     mount = createMount({ strict: true });
     shallow = createShallow({ dive: true });
     render = createRender();
     classes = getClasses(<EmptyState icon={<PersonIcon />} title="Test" description="Test Description" actions={<Button> Test </Button>}/>);
   });
-  
+
   afterEach(() => {
     mount.cleanUp();
   });
-  
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<BrowserRouter><EmptyState icon={<PersonIcon />} title="Test" description="Test Description" actions={<Button> Test </Button>}/></BrowserRouter>, div);
@@ -47,7 +47,7 @@ describe("EmptyState", () => {
       <EmptyState icon={<PersonIcon />} title="Test" />
     );
     expect(wrapper.hasClass(classes.frame)).toEqual(true);
-  });  
+  });
   it('renders with icon', () => {
     let wrapper = shallow(
       <EmptyState icon={<PersonIcon />} title="Test" />
@@ -57,17 +57,17 @@ describe("EmptyState", () => {
       <EmptyState title="Test" />
     );
     expect(wrapper.find(PersonIcon).length).toEqual(0);
-  });  
+  });
   it('renders with text', () => {
     let wrapper = shallow(
       <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" />
     );
     expect(wrapper.find(Typography).length).toEqual(2);
     wrapper = shallow(
-      <EmptyState icon={<PersonIcon />} />
+      <EmptyState icon={<PersonIcon />} title="Test" />
     );
-    expect(wrapper.find(Typography).length).toEqual(0);
-  });  
+    expect(wrapper.find(Typography).length).toEqual(1);
+  });
   it('renders with actions', () => {
     let wrapper = shallow(
       <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" actions={<Button> Test </Button>} />
@@ -77,7 +77,7 @@ describe("EmptyState", () => {
       <EmptyState icon={<PersonIcon />} title="Test" description="Test Description" />
     );
     expect(wrapper.find(Button).length).toEqual(0);
-  });  
+  });
 })
 
 
