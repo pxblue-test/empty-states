@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import * as PXBColors from '@pxblue/colors'
 
-import EmptyState from '../components/emptyStates';
+import EmptyState from '@pxblue/react-components/core/EmptyState';
 
 import DevicesIcon from '@material-ui/icons/Devices'
 
@@ -105,4 +105,4 @@ class SubContent extends React.Component {
     )
   }
 }
-export default withStyles(styles)(SubContent); 
+export default withStyles(styles)(SubContent);
