@@ -7,11 +7,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 // Material Components
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatButtonModule } from "@angular/material/button";
-import { MatIconModule } from "@angular/material/icon";
-import { MatListModule } from "@angular/material/list";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 // Routing
@@ -23,11 +22,13 @@ import { AppRoutingModule } from './app.router';
 
 // Components
 import { AppComponent } from './app.component';
-import { EmptyStateComponent } from './components/empty-state.component';
+
+// PxBlue
+import {EmptyStateModule} from '@pxblue/angular-components';
 
 @NgModule({
   declarations: [
-    AppComponent, ActionsComponent, PlaceholderComponent, SubcontentComponent, TextOnlyComponent, EmptyStateComponent
+    AppComponent, ActionsComponent, PlaceholderComponent, SubcontentComponent, TextOnlyComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -40,7 +41,8 @@ import { EmptyStateComponent } from './components/empty-state.component';
     MatCardModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    EmptyStateModule
   ],
   bootstrap: [
     AppComponent
