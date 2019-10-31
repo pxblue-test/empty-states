@@ -1,6 +1,6 @@
 import React from 'react';
 
-import EmptyState from '../components/emptyStates';
+import EmptyState from '@pxblue/react-components/core/EmptyState';
 
 import AlertIcon from '@material-ui/icons/NotificationImportant'
 

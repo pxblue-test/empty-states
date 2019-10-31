@@ -1,5 +1,5 @@
 import React from 'react';
-import EmptyState from '../components/emptyStates';
+import EmptyState from '@pxblue/react-components/core/EmptyState';
 
 import DevicesIcon from '@material-ui/icons/Devices'
 
