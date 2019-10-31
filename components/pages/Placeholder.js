@@ -1,23 +1,9 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, ImageBackground } from 'react-native';
+import { ImageBackground } from 'react-native';
 import { Button, Icon } from 'react-native-elements';
-import * as Colors from '@pxblue/colors';
-import EmptyState from '../emptystate/Empty';
+import { EmptyState, wrapIcon } from '@pxblue/react-native-components';
+const TrendIcon = wrapIcon({IconClass: Icon, name:'trending-up'});
 
-export class Alarms extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <EmptyState
-          icon={
-            <Icon name="notifications" size={100} color={Colors.gray[500]} />
-          }
-          title={'No Alarms Found'}
-        />
-      </View>
-    );
-  }
-}
 
 export default class Placeholder extends React.Component {
   render() {
@@ -31,9 +17,7 @@ export default class Placeholder extends React.Component {
         imageStyle={{ opacity: .2}}
       >
           <EmptyState
-            icon={
-              <Icon name="trending-up" size={100} color={Colors.gray[500]} />
-            }
+            IconClass={TrendIcon}
             title={'Predictions Page Coming Soon'}
             description={'A fully redesigned predictions page is coming in our next release!'}
             actions={ <Button title="LEARN MORE" type={'outline'} /> }
