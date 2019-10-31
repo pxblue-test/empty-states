@@ -36,7 +36,7 @@ export default class App extends React.Component {
         <View style={styles.container}>
           <Header
             navigation={{icon: MenuIcon, onPress: () => {}}} 
-            title={'Multiselect List'}
+            title={'Empty States'}
           />
           <TabNavigator />
         </View>
