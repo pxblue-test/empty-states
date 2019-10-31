@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { Header, ThemeProvider, wrapIcon } from '@pxblue/react-native-components';
 import TabNavigator from './components/navigation/TabNavigator';
 
-import * as PXBThemes from '@pxblue/themes/react-native';
+import { ReactNative } from '@pxblue/themes';
 import * as Font from 'expo-font';
 
 import {Icon} from 'react-native-elements';
@@ -32,7 +32,7 @@ export default class App extends React.Component {
 
   render() {
     return (this.state.fontLoaded ?
-      <ThemeProvider theme={PXBThemes.expoBlue}>
+      <ThemeProvider theme={ReactNative.expoBlue}>
         <View style={styles.container}>
           <Header
             navigation={{icon: MenuIcon, onPress: () => {}}} 
