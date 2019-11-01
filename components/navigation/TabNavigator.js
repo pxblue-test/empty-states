@@ -1,8 +1,5 @@
 import * as React from 'react';
-import {
-  createBottomTabNavigator,
-  createAppContainer,
-} from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
 import { Icon } from 'react-native-elements';
@@ -55,56 +52,5 @@ const bottomNavigation = createMaterialBottomTabNavigator(
     barStyle: { backgroundColor: Colors.blue[500] }
   }
 );
-
-
-// const bottomNavigation = createBottomTabNavigator(
-//   {
-//     'Actions': {
-//       screen: Actions,
-//       navigationOptions: {
-//         tabBarIcon: ({ focused, horizontal, tintColor }) => (
-//           <Icon name={'touch-app'} size={25} color={tintColor} />
-//         ),
-//       },
-//     },
-//     'Text Only': {
-//       screen: TextOnly,
-//       navigationOptions: {
-//         tabBarIcon: ({ focused, horizontal, tintColor }) => (
-//           <Icon name={'subject'} size={25} color={tintColor} />
-//         ),
-//       },
-//     },
-//     'Placeholder': {
-//       screen: Placeholder,
-//       navigationOptions: {
-//         tabBarIcon: ({ focused, horizontal, tintColor }) => (
-//           <Icon name={'crop-free'} size={25} color={tintColor} />
-//         ),
-//       },
-//     },
-//     'Sub-Content': {
-//       screen: SubContent,
-//       navigationOptions: {
-//         tabBarIcon: ({ focused, horizontal, tintColor }) => (
-//           <Icon name={'view-module'} size={25} color={tintColor} />
-//         ),
-//       },
-//     },
-//   },
-//   {
-//     navigationOptions: ({navigation})=>({
-//       tabBarOnPress:(tab,jumpToIndex) =>{
-//         jumpToIndex(tab.index)
-//       }
-//     }),
-//     tabBarOptions: {
-//       activeTintColor: Colors.blue[500],
-//       activeBackgroundColor: Colors.white[50],
-//       inactiveTintColor: Colors.white[50],
-//       inactiveBackgroundColor: Colors.blue[500],
-//     },
-//   }
-// );
 
 export default createAppContainer(bottomNavigation);

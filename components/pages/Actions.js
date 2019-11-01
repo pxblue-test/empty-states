@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { View } from 'react-native';
 import { Button, Icon } from 'react-native-elements';
-import EmptyState from '../emptystate/Empty';
+import { EmptyState, wrapIcon } from '@pxblue/react-native-components';
 import * as Colors from '@pxblue/colors';
+const DevicesIcon = wrapIcon({IconClass: Icon, name:'devices'});
 
 export default class Devices extends React.Component {
   render() {
     return (
         <EmptyState
-          icon={<Icon name="devices" size={100} color={Colors.gray[500]} />}
+          IconClass={DevicesIcon}
           title={'No Devices'}
           actions={
             <Button

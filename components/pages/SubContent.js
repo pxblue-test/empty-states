@@ -4,12 +4,13 @@ import {
   View,
   StyleSheet,
   ScrollView,
-  ImageBackground,
 } from 'react-native';
-import { Header, Card, Button, Icon } from 'react-native-elements';
-import EmptyState from '../emptystate/Empty';
+import { Card, Button, Icon } from 'react-native-elements';
+import { EmptyState, wrapIcon } from '@pxblue/react-native-components';
 
 import * as Colors from '@pxblue/colors';
+
+const DevicesIcon = wrapIcon({IconClass: Icon, name:'devices'});
 
 const devices = [
   {
@@ -60,9 +61,7 @@ export default class Other extends React.Component {
               </View>
             ) : (
               <EmptyState
-                icon={
-                  <Icon name="devices" size={100} color={Colors.gray[500]} />
-                }
+                IconClass={DevicesIcon}
                 title={'No Data'}
               />
             )}
