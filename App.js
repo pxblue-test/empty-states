@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { Header, ThemeProvider, wrapIcon } from '@pxblue/react-native-components';
 import TabNavigator from './components/navigation/TabNavigator';
 
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
     fontSize: 18,
+    marginTop: Platform.OS === 'android' : 24 : 0
   },
 });
 
